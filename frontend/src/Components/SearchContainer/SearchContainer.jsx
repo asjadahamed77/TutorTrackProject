@@ -16,11 +16,11 @@ const SearchContainer = ({ searchQuery, setSearchQuery }) => {
     let endpoint = '';
 
     if (filter === 'teacher') {
-      endpoint = `http://localhost:5000/api/search/teacher/${searchTerm}`;
+      endpoint = `http://localhost:5001/api/search/teacher/${searchTerm}`;
     } else if (filter === 'subject') {
-      endpoint = `http://localhost:5000/api/search/subject/${searchTerm}`;
+      endpoint = `http://localhost:5001/api/search/subject/${searchTerm}`;
     } else if (filter === 'city') {
-      endpoint = `http://localhost:5000/api/search/city/${searchTerm}`;
+      endpoint = `http://localhost:5001/api/search/city/${searchTerm}`;
     }
 
     if (endpoint) {

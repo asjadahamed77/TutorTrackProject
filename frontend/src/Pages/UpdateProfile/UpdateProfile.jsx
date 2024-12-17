@@ -25,7 +25,7 @@ const UpdateProfile = () => {
         const fetchProfileData = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5000/api/profile/profile', {
+                const response = await axios.get('http://localhost:5001/api/profile/profile', {
                     headers: {
                         'x-auth-token': token,
                     },
@@ -84,7 +84,7 @@ const UpdateProfile = () => {
                 }
             }
             console.log("formdata ",formDataObj)
-            const response = await axios.put('http://localhost:5000/api/profile/update', formDataObj,config);
+            const response = await axios.put('http://localhost:5001/api/profile/update', formDataObj,config);
             console.log(response.data);
             navigate('/profile');
         } catch (error) {

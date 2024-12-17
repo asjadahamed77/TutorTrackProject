@@ -53,7 +53,7 @@ const Profile = () => {
         const fetchProfile = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5000/api/profile/profile', {
+                const response = await axios.get('http://localhost:5001/api/profile/profile', {
                     headers: {
                         'x-auth-token': token,
                     },
